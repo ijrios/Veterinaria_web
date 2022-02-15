@@ -1,6 +1,5 @@
-package udem.edu.co.controller;
+package udem.edu.co;
 
-import udem.edu.co.facade.MascotaFacade;
 import udem.edu.co.entitys.Mascota;
 import udem.edu.co.controller.util.JsfUtil;
 import udem.edu.co.controller.util.PaginationHelper;
@@ -25,7 +24,7 @@ public class MascotaController implements Serializable {
     private Mascota current;
     private DataModel items = null;
     @EJB
-    private udem.edu.co.facade.MascotaFacade ejbFacade;
+    private udem.edu.co.MascotaFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

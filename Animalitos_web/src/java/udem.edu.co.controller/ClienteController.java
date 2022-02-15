@@ -1,6 +1,5 @@
-package udem.edu.co.controller;
+package udem.edu.co;
 
-import udem.edu.co.facade.ClienteFacade;
 import udem.edu.co.entitys.Cliente;
 import udem.edu.co.controller.util.JsfUtil;
 import udem.edu.co.controller.util.PaginationHelper;
@@ -25,7 +24,7 @@ public class ClienteController implements Serializable {
     private Cliente current;
     private DataModel items = null;
     @EJB
-    private udem.edu.co.facade.ClienteFacade ejbFacade;
+    private udem.edu.co.ClienteFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 

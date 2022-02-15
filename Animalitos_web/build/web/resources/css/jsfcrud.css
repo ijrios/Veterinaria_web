@@ -5,7 +5,7 @@ root {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #3a4f54;
-    background-color: #dfecf1;
+    background-color: #fff;
     font-size: small;
 }
 
@@ -38,7 +38,7 @@ form.jsfcrud_list_form th, td th {
     padding-bottom: 6px;
     padding-left: 6px;
     padding-right: 6px;
-    background-color: #b2d5d6;
+    background-color: #fff;
 }
 
 td {

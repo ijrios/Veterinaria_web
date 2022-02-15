@@ -9,7 +9,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import udem.edu.co.entitys.Citas;
-import udem.edu.co.facade.AbstractFacade;
+import udem.edu.co.AbstractFacade;
 
 /**
  *

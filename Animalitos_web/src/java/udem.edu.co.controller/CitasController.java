@@ -1,6 +1,5 @@
-package udem.edu.co.controller;
+package udem.edu.co;
 
-import udem.edu.co.facade.CitasFacade;
 import udem.edu.co.entitys.Citas;
 import udem.edu.co.controller.util.JsfUtil;
 import udem.edu.co.controller.util.PaginationHelper;
@@ -25,7 +24,7 @@ public class CitasController implements Serializable {
     private Citas current;
     private DataModel items = null;
     @EJB
-    private udem.edu.co.facade.CitasFacade ejbFacade;
+    private udem.edu.co.CitasFacade ejbFacade;
     private PaginationHelper pagination;
     private int selectedItemIndex;
 
