@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <link rel="stylesheet" href="styles/Estilos.css"></link>
+    </h:head>
+    <h:body>
+        <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br /><center><h1 class ="title">ANIMALITOS</h1></center>
+                <center><li class="navbar__links">
+                        <a href="index.html" class="navbar__links">Inicio</a>
+                        <a href="mascotas.jsp" class="navbar__links">Contactenos</a>
+                        <a href="altaMascotas.jsp" class="navbar__links">Registrar mascota</a>
+                        <a href="login.jsp"  class="navbar__links"> Reservar cita</a>
+                    </li></center>
+            </ul>
+        </nav>
+      
+        
+        <br />
+        <h:link outcome="/citas/List" value="Show All Citas Items"/>
+        <br />
+        <h:link outcome="/cliente/List" value="Show All Cliente Items"/>
+        <br />
+        <h:link outcome="/mascota/List" value="Show All Mascota Items"/>
+    </h:body>
+
+
+
+</html>
+

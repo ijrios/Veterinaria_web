@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-feb-2022, 11:09:37
+    Author     : jario
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar{
+    height: 80px;
+    background: #131313
+}
+
+.navbar__links:hover{
+    color: #4837ff;
+    transition: all 03s ease;
+}
+
+h2{
+    color: #cccccc  
+}
+.navbar__links{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0.2rem;
+}
+.title{
+    color:#fff
+}
