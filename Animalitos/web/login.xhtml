@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login</title>
+        <link href="img/imgs.css" rel="stylesheet" type="text/css"/>
+         
+    </h:head>
+    <h:body>
+        <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br />
+                <br /><center><h1 class ="title">ANIMALITOS</h1></center>
+                <center><li class="navbar__links">
+                       
+                        <a href="faces/index.xhtml" class="navbar__links">Inicio</a>
+                        <a href="contactenos/Create.xhtml" class="navbar__links">Contactenos</a>
+                        <a href="faces/mascota/Create.xhtml" class="navbar__links">Registrar mascota</a>
+                        <a href="login.xhtml"  class="navbar__links"> Reservar cita</a>
+                    </li></center>
+            </ul>
+         </nav>
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <div class = "login-form" id="login-form">
+             <form action="#" class ="formularioUp1" id="formularioUp1" method="post">
+                 <br />
+                 <center> 
+                     <h1> Inicie sesion</h1>
+                     <p>Usuario</p>
+                     <div class ="texto">
+                         <input type="text" class ="txt" id="txtMascosta" required =""></input>
+                         <a href="mascotas.jsp"></a>
+                     </div>
+
+                     <p>Contraseña</p>
+                     <div class ="texto">
+                         <input type="password" class ="txt" id="txtContraseña1" required =""></input>
+                     </div>
+                     <br />
+                     <br />
+                     <input type="submit" class ="txt" id="Iniciar Sesion" required =""></input>
+                     <input type="button" value="BorrarDatos" class ="txt" id="Borrar Datos" required ="" onclick="borrardatos()"></input>
+
+                 </center>
+             </form>
+         </div>
+         
+
+         
+    </h:body>
+</html>
+

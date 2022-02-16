@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateContactenosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateContactenosLabel_nombres}" for="nombres" />
+                    <h:inputText id="nombres" value="#{contactenosController.selected.nombres}" title="#{bundle.CreateContactenosTitle_nombres}" required="true" requiredMessage="#{bundle.CreateContactenosRequiredMessage_nombres}"/>
+                    <h:outputLabel value="#{bundle.CreateContactenosLabel_correo}" for="correo" />
+                    <h:inputText id="correo" value="#{contactenosController.selected.correo}" title="#{bundle.CreateContactenosTitle_correo}" />
+                    <h:outputLabel value="#{bundle.CreateContactenosLabel_telefono}" for="telefono" />
+                    <h:inputText id="telefono" value="#{contactenosController.selected.telefono}" title="#{bundle.CreateContactenosTitle_telefono}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{contactenosController.create}" value="#{bundle.CreateContactenosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{contactenosController.prepareList}" value="#{bundle.CreateContactenosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateContactenosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

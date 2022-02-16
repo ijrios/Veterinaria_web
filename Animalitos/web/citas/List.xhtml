@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListCitasTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListCitasEmpty}" rendered="#{citasController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{citasController.items.rowCount > 0}">
+                    <h:outputText value="#{citasController.pagination.pageFirstItem + 1}..#{citasController.pagination.pageLastItem + 1}/#{citasController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{citasController.previous}" value="#{bundle.Previous} #{citasController.pagination.pageSize}" rendered="#{citasController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{citasController.next}" value="#{bundle.Next} #{citasController.pagination.pageSize}" rendered="#{citasController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{citasController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCitasTitle_idcitas}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idcitas}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCitasTitle_idpet}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idpet}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCitasTitle_fecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCitasTitle_hora}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hora}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListCitasTitle_servicio}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.servicio}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{citasController.prepareView}" value="#{bundle.ListCitasViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{citasController.prepareEdit}" value="#{bundle.ListCitasEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{citasController.destroy}" value="#{bundle.ListCitasDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{citasController.prepareCreate}" value="#{bundle.ListCitasCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListCitasIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

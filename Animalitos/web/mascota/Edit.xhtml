@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditMascotaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditMascotaLabel_idpet}" for="idpet" />
+                    <h:inputText id="idpet" value="#{mascotaController.selected.idpet}" title="#{bundle.EditMascotaTitle_idpet}" required="true" requiredMessage="#{bundle.EditMascotaRequiredMessage_idpet}"/>
+                    <h:outputLabel value="#{bundle.EditMascotaLabel_users}" for="users" />
+                    <h:inputText id="users" value="#{mascotaController.selected.users}" title="#{bundle.EditMascotaTitle_users}" required="true" requiredMessage="#{bundle.EditMascotaRequiredMessage_users}"/>
+                    <h:outputLabel value="#{bundle.EditMascotaLabel_nombre}" for="nombre" />
+                    <h:inputText id="nombre" value="#{mascotaController.selected.nombre}" title="#{bundle.EditMascotaTitle_nombre}" required="true" requiredMessage="#{bundle.EditMascotaRequiredMessage_nombre}"/>
+                    <h:outputLabel value="#{bundle.EditMascotaLabel_contraseña}" for="contraseña" />
+                    <h:inputText id="contraseña" value="#{mascotaController.selected.contraseña}" title="#{bundle.EditMascotaTitle_contraseña}" required="true" requiredMessage="#{bundle.EditMascotaRequiredMessage_contraseña}"/>
+                    <h:outputLabel value="#{bundle.EditMascotaLabel_dueño}" for="dueño" />
+                    <h:inputText id="dueño" value="#{mascotaController.selected.dueño}" title="#{bundle.EditMascotaTitle_dueño}" required="true" requiredMessage="#{bundle.EditMascotaRequiredMessage_dueño}"/>
+                </h:panelGrid>
+                <h:commandLink action="#{mascotaController.update}" value="#{bundle.EditMascotaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditMascotaViewLink}"/>
+                <br />
+                <h:commandLink action="#{mascotaController.prepareList}" value="#{bundle.EditMascotaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditMascotaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
