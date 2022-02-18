@@ -10,7 +10,7 @@
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
     </h:head>
 
-    <h:body>
+    <h:body id="principal">
         <nav class ="navbar">
             <ul class="navbar__menu">
                 <br />
@@ -39,6 +39,13 @@
             </center>
             
         </p>
+        
+        <h:form>
+            <center>
+            <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" class="boton1" ></h:commandButton>
+            </center>
+         </h:form>
+        
     </h:body>
 
 </html>

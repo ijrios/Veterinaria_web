@@ -9,7 +9,6 @@
     <h:body>
        <nav class ="navbar">
             <ul class="navbar__menu">
-                <br />
                 <br /><center><h1 class ="title">IOT STORE</h1></center>
                 <center><li class="navbar__links">
                         <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
@@ -17,6 +16,7 @@
                         <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
                         <h:link outcome="/productos/Create.xhtml" class="navbar__links" value="Productos "/>
                         <h:link outcome="/ventas/Create.xhtml" class="navbar__links" value="Ventas"/>
+                    
                     </li></center>
             </ul>
         </nav>
@@ -27,14 +27,13 @@
         </div>
         <center><h3 class="texto-encima">Sistema de gestión de base datos</h3></center>
         <center>
+             <h:form>
             <br /><h:link outcome="administrador.xhtml" class="boton1" value="Funciones administrador"/>
+            <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" class="boton1" ></h:commandButton>
+             </h:form>
         </center>
 
-        <h:form>
-            <center>
-                <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion"></h:commandButton>
-                </center>
-        </h:form>
+        
 
     </h:body>
 

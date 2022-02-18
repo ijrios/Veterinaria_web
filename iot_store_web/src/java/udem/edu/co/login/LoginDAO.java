@@ -24,7 +24,7 @@ public class LoginDAO {
 
 		try {
 			con = DataConnect.getConnection();
-			ps = con.prepareStatement("Select users, contraseña from mascota where users = ? and contraseña = ?");
+			ps = con.prepareStatement("Select uname, password from users where uname = ? and password = ?");
 			ps.setString(1, user);
 			ps.setString(2, password);
 
