@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.CreateProductosProveedoresTitle}"></h:outputText>
+            <h:outputText value="Crear nuevo producto con su proveedor"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
@@ -27,13 +27,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{productosProveedoresController.create}" value="#{bundle.CreateProductosProveedoresSaveLink}" />
+                <h:commandLink action="#{productosProveedoresController.create}" value="Guardar" />
                 <br />
                 <br />
-                <h:commandLink action="#{productosProveedoresController.prepareList}" value="#{bundle.CreateProductosProveedoresShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{productosProveedoresController.prepareList}" value="Mostrar todo" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateProductosProveedoresIndexLink}"/>
+                <h:link outcome="/index" value="Inicio"/>
             </h:form>
         </ui:define>
     </ui:composition>

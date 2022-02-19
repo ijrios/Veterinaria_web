@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.EditVentasTitle}"></h:outputText>
+            <h:outputText value="Editar ventas"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
@@ -35,12 +35,12 @@
                 <h:commandLink action="#{ventasController.update}" value="#{bundle.EditVentasSaveLink}"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditVentasViewLink}"/>
+                <h:link outcome="View" value="Mostrar venta actual"/>
                 <br />
-                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.EditVentasShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{ventasController.prepareList}" value="Mostrar ventas" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditVentasIndexLink}" />
+                <h:link outcome="/index" value="Inicio" />
             </h:form>
         </ui:define>
     </ui:composition>

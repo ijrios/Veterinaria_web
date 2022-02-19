@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ListProductosProveedoresTitle}"></h:outputText>
+            <h:outputText value="Lista producto proveedor"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
@@ -42,19 +42,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{productosProveedoresController.prepareView}" value="#{bundle.ListProductosProveedoresViewLink}"/>
+                            <h:commandLink action="#{productosProveedoresController.prepareView}" value="Ver"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{productosProveedoresController.prepareEdit}" value="#{bundle.ListProductosProveedoresEditLink}"/>
+                            <h:commandLink action="#{productosProveedoresController.prepareEdit}" value="Editar"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{productosProveedoresController.destroy}" value="#{bundle.ListProductosProveedoresDestroyLink}"/>
+                            <h:commandLink action="#{productosProveedoresController.destroy}" value="Eliminar"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{productosProveedoresController.prepareCreate}" value="#{bundle.ListProductosProveedoresCreateLink}"/>
+                <h:commandLink action="#{productosProveedoresController.prepareCreate}" value="Crear nuevo producto proveedor"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListProductosProveedoresIndexLink}"/>
+                <h:link outcome="/index" value="Inicio"/>
             </h:form>
         </ui:define>
     </ui:composition>

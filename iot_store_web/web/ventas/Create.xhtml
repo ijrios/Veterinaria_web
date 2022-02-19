@@ -7,13 +7,13 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.CreateVentasTitle}"></h:outputText>
+            <h:outputText value="Crear nueva venta"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
-            <h:form>
+            <h:form id ="main2">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateVentasLabel_idPago}" for="idPago" />
                     <h:inputText id="idPago" value="#{ventasController.selected.idPago}" title="#{bundle.CreateVentasTitle_idPago}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_idPago}"/>
@@ -33,13 +33,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{ventasController.create}" value="#{bundle.CreateVentasSaveLink}" />
+                <h:commandLink action="#{ventasController.create}" value="Guardar" />
                 <br />
                 <br />
-                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.CreateVentasShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{ventasController.prepareList}" value="Mostrar ventas" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateVentasIndexLink}"/>
+                <h:link outcome="/index" value="Inicio"/>
             </h:form>
         </ui:define>
     </ui:composition>

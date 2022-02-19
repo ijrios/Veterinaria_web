@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ListClientesTitle}"></h:outputText>
+            <h:outputText value="Lista cliente"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
@@ -68,19 +68,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{clientesController.prepareView}" value="#{bundle.ListClientesViewLink}"/>
+                            <h:commandLink action="#{clientesController.prepareView}" value="Ver"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{clientesController.prepareEdit}" value="#{bundle.ListClientesEditLink}"/>
+                            <h:commandLink action="#{clientesController.prepareEdit}" value="Editar"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{clientesController.destroy}" value="#{bundle.ListClientesDestroyLink}"/>
+                            <h:commandLink action="#{clientesController.destroy}" value="Eliminar"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{clientesController.prepareCreate}" value="#{bundle.ListClientesCreateLink}"/>
+                <h:commandLink action="#{clientesController.prepareCreate}" value="Crear nuevo cliente"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListClientesIndexLink}"/>
+                <h:link outcome="/index" value="Inicio"/>
             </h:form>
         </ui:define>
     </ui:composition>
