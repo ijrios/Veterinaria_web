@@ -87,7 +87,7 @@ CREATE TABLE ventas  (
 INSERT INTO users VALUES (0214, 'jose','jose');
 INSERT INTO users VALUES (1125, 'joseberrio','miguelito');
 INSERT INTO users VALUES (2027, 'pinguinos','dbr');
-
+INSERT INTO users VALUES (1999, 'rociodetodosloscampos','natalia');
 
 -- ----------------------------
 -- Records of tipos_id
