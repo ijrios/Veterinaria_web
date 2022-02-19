@@ -20,7 +20,7 @@
                     <h:outputLabel value="#{bundle.EditTiposIdLabel_description}" for="description" />
                     <h:inputText id="description" value="#{tiposIdController.selected.description}" title="#{bundle.EditTiposIdTitle_description}" required="true" requiredMessage="#{bundle.EditTiposIdRequiredMessage_description}"/>
                 </h:panelGrid>
-                <h:commandLink action="#{tiposIdController.update}" value="#{bundle.EditTiposIdSaveLink}"/>
+                <h:commandLink action="#{tiposIdController.update}" value="Guardar"/>
                 <br />
                 <br />
                 <h:link outcome="View" value="Listar actual"/>

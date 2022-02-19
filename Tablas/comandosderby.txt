@@ -1,4 +1,13 @@
 -- ----------------------------
+-- Table structure users
+-- ----------------------------
+
+CREATE TABLE users  (
+    uid int primary key not null,
+    uname varchar(30) not null,
+    password varchar(30) not null)
+
+-- ----------------------------
 -- Table structure for tipos_id
 -- ----------------------------
 
@@ -69,6 +78,15 @@ CREATE TABLE ventas  (
     cantidad int NOT NULL,
     foreign key (id_cliente) references clientes,
     foreign key (id_producto) references productos); 
+
+
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO users VALUES (0214, 'jose','jose');
+INSERT INTO users VALUES (1125, 'joseberrio','miguelito');
+INSERT INTO users VALUES (2027, 'pinguinos','dbr');
 
 
 -- ----------------------------

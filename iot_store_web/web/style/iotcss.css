@@ -70,3 +70,12 @@ h2{
     border-top: 6px solid #00c3ff;
     box-shadow: 0px 35px 44px -22px rgba(0, 0, 0, 0.72);
 }
+
+#principal2{
+    width: 58%;
+    margin: 0 auto;
+    background: url(2.svg)no-repeat 0px 0px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 33px 67px;
+}

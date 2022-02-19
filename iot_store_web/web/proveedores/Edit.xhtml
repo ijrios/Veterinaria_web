@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.EditProveedoresTitle}"></h:outputText>
+            <h:outputText value="Editar proveedor"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
@@ -32,15 +32,15 @@
                         <f:selectItems value="#{tiposIdController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{proveedoresController.update}" value="#{bundle.EditProveedoresSaveLink}"/>
+                <h:commandLink action="#{proveedoresController.update}" value="Guardar"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditProveedoresViewLink}"/>
+                <h:link outcome="View" value="Ver proveedor"/>
                 <br />
-                <h:commandLink action="#{proveedoresController.prepareList}" value="#{bundle.EditProveedoresShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{proveedoresController.prepareList}" value="Mostrar todo" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditProveedoresIndexLink}" />
+                <h:link outcome="/index" value="Inicio" />
             </h:form>
         </ui:define>
     </ui:composition>

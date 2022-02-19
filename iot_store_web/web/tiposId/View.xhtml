@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ViewTiposIdTitle}"></h:outputText>
+            <h:outputText value="Listar tipos ID"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
@@ -21,17 +21,17 @@
                     <h:outputText value="#{tiposIdController.selected.description}" title="#{bundle.ViewTiposIdTitle_description}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{tiposIdController.destroyAndView}" value="#{bundle.ViewTiposIdDestroyLink}"/>
+                <h:commandLink action="#{tiposIdController.destroyAndView}" value="Eliminar}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewTiposIdEditLink}"/>
+                <h:link outcome="Edit" value="Editar"/>
                 <br />
-                <h:commandLink action="#{tiposIdController.prepareCreate}" value="#{bundle.ViewTiposIdCreateLink}" />
+                <h:commandLink action="#{tiposIdController.prepareCreate}" value="Crear nuevo tipo ID" />
                 <br />
-                <h:commandLink action="#{tiposIdController.prepareList}" value="#{bundle.ViewTiposIdShowAllLink}"/>
+                <h:commandLink action="#{tiposIdController.prepareList}" value="Mostrar todos"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewTiposIdIndexLink}"/>
+                <h:link outcome="/index" value="Inicio"/>
 
             </h:form>
         </ui:define>
