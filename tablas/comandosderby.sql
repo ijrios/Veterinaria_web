@@ -91,6 +91,7 @@ INSERT INTO users VALUES (1999, 'rociodetodosloscampos','natalia');
 INSERT INTO users VALUES (1993, 'sophie','infatuation');
 INSERT INTO users VALUES (2021, 'reverie','arca');
 INSERT INTO users VALUES (0418, 'mirandoelfuego','elbuho');
+INSERT INTO users VALUES (0428, 'motoc','loscil');
 INSERT INTO users VALUES (0413, 'mutant','arca');
 INSERT INTO users VALUES (0902, 'axolotl','doonkanda');
 INSERT INTO users VALUES (7777, 'florecer','nanosterm');
