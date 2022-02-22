@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import udem.edu.co.controller.ProductosProveedores;
 import udem.edu.co.controller.Ventas;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2022-02-19T17:22:51")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2022-02-22T07:39:22")
 @StaticMetamodel(Productos.class)
 public class Productos_ { 
 

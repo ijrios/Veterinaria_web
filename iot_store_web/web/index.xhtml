@@ -8,7 +8,7 @@
         <script src="js/functions.js" type="text/javascript"></script>
     </h:head>
     <h:body>
-       <nav class ="navbar">
+        <nav class ="navbar">
             <ul class="navbar__menu">
                 <br /><center><h1 class ="title">IOT STORE</h1></center>
                 <center><li class="navbar__links">
@@ -17,7 +17,7 @@
                         <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
                         <h:link outcome="/productos/Create.xhtml" class="navbar__links" value="Productos "/>
                         <h:link outcome="/ventas/Create.xhtml" class="navbar__links" value="Ventas"/>
-                    
+
                     </li></center>
             </ul>
         </nav>
@@ -28,14 +28,16 @@
         </div>
         <center><h3 class="texto-encima">Sistema de gestión de base datos</h3></center>
         <center>
-             <h:form>
-            <br /><h:link outcome="administrador.xhtml" class="boton1" value="Funciones administrador"/>
-            <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" ></h:commandButton>
-             </h:form>
+            <h:form>
+                <br /><h:link outcome="administrador.xhtml" class="boton1" value="Funciones administrador"/>
+                <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" ></h:commandButton>
+            </h:form>
         </center>
 
-        
 
+
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
     </h:body>
 
 
