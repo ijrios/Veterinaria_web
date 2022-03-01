@@ -13,6 +13,11 @@ import udem.edu.co.entitys.Proveedores;
 /**
  *
  * @author jario
+ * @since 27/02/2022
+ * @version 4
+ * 
+ * Esta clase es el controlador de la aplicación
+ *  
  */
 @Stateless
 public class ProveedoresFacade extends AbstractFacade<Proveedores> {

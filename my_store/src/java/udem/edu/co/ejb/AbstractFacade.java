@@ -11,6 +11,11 @@ import javax.persistence.EntityManager;
 /**
  *
  * @author jario
+ * @since 27/02/2022
+ * @version 4
+ * 
+ * Esta clase es el controlador de la aplicación
+ *  
  */
 public abstract class AbstractFacade<T> {
 

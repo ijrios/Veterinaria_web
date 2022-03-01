@@ -9,10 +9,14 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import udem.edu.co.entitys.Clientes;
-
 /**
  *
  * @author jario
+ * @since 27/02/2022
+ * @version 4
+ * 
+ * Esta clase es el controlador de la aplicación
+ *  
  */
 @Stateless
 public class ClientesFacade extends AbstractFacade<Clientes> {
