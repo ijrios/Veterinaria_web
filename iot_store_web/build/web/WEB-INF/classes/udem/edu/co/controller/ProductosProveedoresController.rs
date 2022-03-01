@@ -1,3 +1,0 @@
-udem.edu.co.entitys.ProductosProveedoresController$ProductosProveedoresControllerConverter
-udem.edu.co.entitys.ProductosProveedoresController
-udem.edu.co.entitys.ProductosProveedoresController$1

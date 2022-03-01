@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewProductosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewProductosLabel_id}"/>
+                    <h:outputText value="#{productosController.selected.id}" title="#{bundle.ViewProductosTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewProductosLabel_descripcion}"/>
+                    <h:outputText value="#{productosController.selected.descripcion}" title="#{bundle.ViewProductosTitle_descripcion}"/>
+                    <h:outputText value="#{bundle.ViewProductosLabel_costo}"/>
+                    <h:outputText value="#{productosController.selected.costo}" title="#{bundle.ViewProductosTitle_costo}"/>
+                    <h:outputText value="#{bundle.ViewProductosLabel_precio}"/>
+                    <h:outputText value="#{productosController.selected.precio}" title="#{bundle.ViewProductosTitle_precio}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{productosController.destroyAndView}" value="#{bundle.ViewProductosDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewProductosEditLink}"/>
+                <br />
+                <h:commandLink action="#{productosController.prepareCreate}" value="#{bundle.ViewProductosCreateLink}" />
+                <br />
+                <h:commandLink action="#{productosController.prepareList}" value="#{bundle.ViewProductosShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewProductosIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
