@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewClientesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewClientesLabel_id}"/>
+                    <h:outputText value="#{clientesController.selected.id}" title="#{bundle.ViewClientesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_nombres}"/>
+                    <h:outputText value="#{clientesController.selected.nombres}" title="#{bundle.ViewClientesTitle_nombres}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_apellidos}"/>
+                    <h:outputText value="#{clientesController.selected.apellidos}" title="#{bundle.ViewClientesTitle_apellidos}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_fechaIngreso}"/>
+                    <h:outputText value="#{clientesController.selected.fechaIngreso}" title="#{bundle.ViewClientesTitle_fechaIngreso}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewClientesLabel_direccion}"/>
+                    <h:outputText value="#{clientesController.selected.direccion}" title="#{bundle.ViewClientesTitle_direccion}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_telefono}"/>
+                    <h:outputText value="#{clientesController.selected.telefono}" title="#{bundle.ViewClientesTitle_telefono}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_tipoId}"/>
+                    <h:outputText value="#{clientesController.selected.tipoId}" title="#{bundle.ViewClientesTitle_tipoId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{clientesController.destroyAndView}" value="#{bundle.ViewClientesDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewClientesEditLink}"/>
+                <br />
+                <h:commandLink action="#{clientesController.prepareCreate}" value="#{bundle.ViewClientesCreateLink}" />
+                <br />
+                <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.ViewClientesShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewClientesIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
