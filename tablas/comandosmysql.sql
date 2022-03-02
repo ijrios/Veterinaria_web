@@ -2,14 +2,14 @@ drop database if exists my_store;
 create database my_store;
 use my_store;
 
-
 -- ----------------------------
 -- Table structure for users
 -- ----------------------------
 DROP TABLE IF EXISTS users;
 CREATE TABLE users  (
     uid int(11) NOT NULL,
-    uname varchar(30) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,password varchar(30) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
+    uname varchar(30) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
+    password varchar(30) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
     PRIMARY KEY (uid) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_general_cs ROW_FORMAT = Dynamic;
 
