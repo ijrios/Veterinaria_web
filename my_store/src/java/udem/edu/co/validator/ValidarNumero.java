@@ -4,11 +4,14 @@
  * and open the template in the editor.
  */
 package udem.edu.co.validator;
-
 /**
  *
  * @author jario
- * http://chuwiki.chuidiang.org/
+ * @since 27/02/2022
+ * @version 4
+ * 
+ * Esta clase valida que el valor ingresado en el input sea entero
+ * Bibliografía:  http://chuwiki.chuidiang.org/
  */
 
 import javax.faces.application.FacesMessage;
