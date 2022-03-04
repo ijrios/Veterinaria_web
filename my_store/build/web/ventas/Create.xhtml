@@ -11,7 +11,7 @@
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+               
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
@@ -36,7 +36,11 @@
                         <f:selectItems value="#{productosController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:message for = "fecha" style = "color:red" />
+                <h:message for = "fecha" style = "color:green" />
+                <br />
+                <h:message for = "cantidad" style = "color:green" />
+                <br />
+                <h:message for = "idPago" style = "color:green" />
                 <br />
                 <h:commandLink action="#{ventasController.create}" value="#{bundle.CreateVentasSaveLink}" />
                 <br />
