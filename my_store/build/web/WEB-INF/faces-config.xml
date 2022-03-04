@@ -9,4 +9,10 @@
             <var>bundle</var>
         </resource-bundle>
     </application>
+    
+    <validator>
+		<validator-id>validarInt</validator-id>
+		<validator-class>udem.edu.co.validator.ValidarNumero</validator-class>
+	</validator>
+    
 </faces-config>

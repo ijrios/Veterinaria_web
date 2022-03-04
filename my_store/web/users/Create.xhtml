@@ -16,7 +16,9 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
-                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"/>
+                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}">
+                        <f:validator validatorId="validarInt"></f:validator>
+                    </h:inputText>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_password}" for="password" />

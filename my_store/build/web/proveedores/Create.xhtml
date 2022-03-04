@@ -16,7 +16,9 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.CreateProveedoresTitle_id}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_id}"/>
+                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.CreateProveedoresTitle_id}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_id}">
+                        <f:validator validatorId="validarInt"></f:validator>
+                    </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_nombres}" for="nombres" />
                     <h:inputText id="nombres" value="#{proveedoresController.selected.nombres}" title="#{bundle.CreateProveedoresTitle_nombres}" />
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_apellidos}" for="apellidos" />
@@ -28,12 +30,15 @@
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_direccion}" for="direccion" />
                     <h:inputText id="direccion" value="#{proveedoresController.selected.direccion}" title="#{bundle.CreateProveedoresTitle_direccion}" />
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_telefono}" for="telefono" />
-                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.CreateProveedoresTitle_telefono}" />
+                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.CreateProveedoresTitle_telefono}" >
+                        <f:validator validatorId="validarInt"></f:validator>
+                    </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_tipoId}" for="tipoId" />
                     <h:selectOneMenu id="tipoId" value="#{proveedoresController.selected.tipoId}" title="#{bundle.CreateProveedoresTitle_tipoId}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_tipoId}">
                         <f:selectItems value="#{tiposIdController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
+                <h:message for = "fecfechaIngreso" style = "color:red" />
                 <br />
                 <h:commandLink action="#{proveedoresController.create}" value="#{bundle.CreateProveedoresSaveLink}" />
                 <br />
