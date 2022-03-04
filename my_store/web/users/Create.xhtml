@@ -10,9 +10,6 @@
             <h:outputText value="#{bundle.CreateUsersTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
-            <h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
-            </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
@@ -22,9 +19,17 @@
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_password}" for="password" />
-                    <h:inputText id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}"/>
+                    <h:inputSecret id="passwordinit"  required="true" />
+                    <h:outputLabel value="Repetir contraseña" for="password" />
+                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}"/>
                 </h:panelGrid>
+                <h:panelGroup id="messagePanel" layout="block">
                 <br />
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                <br />
+                <h:message for = "uid" style = "color:green" />
+                <br />
+            </h:panelGroup>
                 <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" />
                 <br />
                 <br />

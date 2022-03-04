@@ -10,9 +10,7 @@
             <h:outputText value="#{bundle.EditProductosTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
-            <h:panelGroup id="messagePanel" layout="block">
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
-            </h:panelGroup>
+            
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditProductosLabel_id}" for="id" />
@@ -24,6 +22,17 @@
                     <h:outputLabel value="#{bundle.EditProductosLabel_precio}" for="precio" />
                     <h:inputText id="precio" value="#{productosController.selected.precio}" title="#{bundle.EditProductosTitle_precio}" />
                 </h:panelGrid>
+                 <h:panelGroup id="messagePanel" layout="block">
+              <br />
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                <br />
+                <h:message for = "precio" style = "color:green" />
+                <br />
+                <h:message for = "costo" style = "color:green" />
+                <br />
+                <h:message for = "id" style = "color:green" />
+                <br />
+            </h:panelGroup>
                 <h:commandLink action="#{productosController.update}" value="#{bundle.EditProductosSaveLink}"/>
                 <br />
                 <br />

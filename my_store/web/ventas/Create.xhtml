@@ -10,9 +10,7 @@
             <h:outputText value="#{bundle.CreateVentasTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
-            <h:panelGroup id="messagePanel" layout="block">
-               
-            </h:panelGroup>
+            
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateVentasLabel_idPago}" for="idPago" />
@@ -36,12 +34,17 @@
                         <f:selectItems value="#{productosController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
+                <h:panelGroup id="messagePanel" layout="block">
+               <br />
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                <br />
                 <h:message for = "fecha" style = "color:green" />
                 <br />
                 <h:message for = "cantidad" style = "color:green" />
                 <br />
                 <h:message for = "idPago" style = "color:green" />
                 <br />
+            </h:panelGroup>
                 <h:commandLink action="#{ventasController.create}" value="#{bundle.CreateVentasSaveLink}" />
                 <br />
                 <br />
