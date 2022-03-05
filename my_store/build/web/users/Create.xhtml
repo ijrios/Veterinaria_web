@@ -13,7 +13,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
-                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  >
+                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  label="Id de usuario">
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
@@ -22,7 +22,8 @@
                     <h:inputSecret id="passwordinit"  required="true" >
                     </h:inputSecret>
                     <h:outputLabel value="Repetir contraseña" for="password" />
-                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
+                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" 
+                                   validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
                         <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
                         </f:validateRegex>
                     </h:inputSecret>

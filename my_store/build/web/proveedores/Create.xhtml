@@ -14,7 +14,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.CreateProveedoresTitle_id}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_id}">
+                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.CreateProveedoresTitle_id}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_id}" label="Id proveedoro">
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_nombres}" for="nombres" />
@@ -22,13 +22,13 @@
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_apellidos}" for="apellidos" />
                     <h:inputText id="apellidos" value="#{proveedoresController.selected.apellidos}" title="#{bundle.CreateProveedoresTitle_apellidos}" />
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_fechaIngreso}" for="fechaIngreso" />
-                    <h:inputText id="fechaIngreso" value="#{proveedoresController.selected.fechaIngreso}" title="#{bundle.CreateProveedoresTitle_fechaIngreso}" >
+                    <h:inputText id="fechaIngreso" value="#{proveedoresController.selected.fechaIngreso}" title="#{bundle.CreateProveedoresTitle_fechaIngreso}" label="Fecha de ingreso">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_direccion}" for="direccion" />
                     <h:inputText id="direccion" value="#{proveedoresController.selected.direccion}" title="#{bundle.CreateProveedoresTitle_direccion}" />
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_telefono}" for="telefono" />
-                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.CreateProveedoresTitle_telefono}" >
+                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.CreateProveedoresTitle_telefono}" label="Teléfono">
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_tipoId}" for="tipoId" />

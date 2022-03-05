@@ -14,11 +14,12 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditUsersLabel_uid}" for="uid" />
-                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.EditUsersTitle_uid}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_uid}"/>
+                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.EditUsersTitle_uid}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_uid}" label="Id de usuario"/>
                     <h:outputLabel value="#{bundle.EditUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.EditUsersTitle_uname}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.EditUsersLabel_password}" for="password" />
-                    <h:inputText id="password" value="#{usersController.selected.password}" title="#{bundle.EditUsersTitle_password}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_password}" validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
+                    <h:inputText id="password" value="#{usersController.selected.password}" title="#{bundle.EditUsersTitle_password}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_password}" 
+                                 validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
                     <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
                         </f:validateRegex>
                 </h:panelGrid>

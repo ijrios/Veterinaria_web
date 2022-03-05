@@ -14,13 +14,13 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditVentasLabel_idPago}" for="idPago" />
-                    <h:inputText id="idPago" value="#{ventasController.selected.idPago}" title="#{bundle.EditVentasTitle_idPago}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_idPago}"/>
+                    <h:inputText id="idPago" value="#{ventasController.selected.idPago}" title="#{bundle.EditVentasTitle_idPago}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_idPago}" label="Id de pago"/>
                     <h:outputLabel value="#{bundle.EditVentasLabel_fecha}" for="fecha" />
-                    <h:inputText id="fecha" value="#{ventasController.selected.fecha}" title="#{bundle.EditVentasTitle_fecha}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_fecha}">
+                    <h:inputText id="fecha" value="#{ventasController.selected.fecha}" title="#{bundle.EditVentasTitle_fecha}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_fecha}" label="Fecha">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.EditVentasLabel_cantidad}" for="cantidad" />
-                    <h:inputText id="cantidad" value="#{ventasController.selected.cantidad}" title="#{bundle.EditVentasTitle_cantidad}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_cantidad}"/>
+                    <h:inputText id="cantidad" value="#{ventasController.selected.cantidad}" title="#{bundle.EditVentasTitle_cantidad}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_cantidad}" label="Cantidad"/>
                     <h:outputLabel value="#{bundle.EditVentasLabel_idCliente}" for="idCliente" />
                     <h:selectOneMenu id="idCliente" value="#{ventasController.selected.idCliente}" title="#{bundle.EditVentasTitle_idCliente}" required="true" requiredMessage="#{bundle.EditVentasRequiredMessage_idCliente}">
                         <f:selectItems value="#{clientesController.itemsAvailableSelectOne}"/>

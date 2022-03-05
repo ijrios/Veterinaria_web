@@ -14,15 +14,15 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateVentasLabel_idPago}" for="idPago" />
-                    <h:inputText id="idPago" value="#{ventasController.selected.idPago}" title="#{bundle.CreateVentasTitle_idPago}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_idPago}">
+                    <h:inputText id="idPago" value="#{ventasController.selected.idPago}" title="#{bundle.CreateVentasTitle_idPago}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_idPago}" label="Id de pago">
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateVentasLabel_fecha}" for="fecha" />
-                    <h:inputText id="fecha" value="#{ventasController.selected.fecha}" title="#{bundle.CreateVentasTitle_fecha}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_fecha}">
+                    <h:inputText id="fecha" value="#{ventasController.selected.fecha}" title="#{bundle.CreateVentasTitle_fecha}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_fecha}" label="Fecha">
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateVentasLabel_cantidad}" for="cantidad" />
-                    <h:inputText id="cantidad" value="#{ventasController.selected.cantidad}" title="#{bundle.CreateVentasTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_cantidad}">
+                    <h:inputText id="cantidad" value="#{ventasController.selected.cantidad}" title="#{bundle.CreateVentasTitle_cantidad}" required="true" requiredMessage="#{bundle.CreateVentasRequiredMessage_cantidad}" label="Cantidad">
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateVentasLabel_idCliente}" for="idCliente" />

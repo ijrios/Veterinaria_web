@@ -14,13 +14,13 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditProductosLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{productosController.selected.id}" title="#{bundle.EditProductosTitle_id}" required="true" requiredMessage="#{bundle.EditProductosRequiredMessage_id}"/>
+                    <h:inputText id="id" value="#{productosController.selected.id}" title="#{bundle.EditProductosTitle_id}" required="true" requiredMessage="#{bundle.EditProductosRequiredMessage_id}" label="Id de producto"/>
                     <h:outputLabel value="#{bundle.EditProductosLabel_descripcion}" for="descripcion" />
                     <h:inputText id="descripcion" value="#{productosController.selected.descripcion}" title="#{bundle.EditProductosTitle_descripcion}" />
                     <h:outputLabel value="#{bundle.EditProductosLabel_costo}" for="costo" />
-                    <h:inputText id="costo" value="#{productosController.selected.costo}" title="#{bundle.EditProductosTitle_costo}" />
+                    <h:inputText id="costo" value="#{productosController.selected.costo}" title="#{bundle.EditProductosTitle_costo}" label="Costo"/>
                     <h:outputLabel value="#{bundle.EditProductosLabel_precio}" for="precio" />
-                    <h:inputText id="precio" value="#{productosController.selected.precio}" title="#{bundle.EditProductosTitle_precio}" />
+                    <h:inputText id="precio" value="#{productosController.selected.precio}" title="#{bundle.EditProductosTitle_precio}" label="Precio" />
                 </h:panelGrid>
                  <h:panelGroup id="messagePanel" layout="block">
                 <br />

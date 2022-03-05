@@ -14,19 +14,19 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_id}" for="id" />
-                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.EditProveedoresTitle_id}" required="true" requiredMessage="#{bundle.EditProveedoresRequiredMessage_id}"/>
+                    <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.EditProveedoresTitle_id}" required="true" requiredMessage="#{bundle.EditProveedoresRequiredMessage_id}" label="Id proveedor"/>
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_nombres}" for="nombres" />
                     <h:inputText id="nombres" value="#{proveedoresController.selected.nombres}" title="#{bundle.EditProveedoresTitle_nombres}" />
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_apellidos}" for="apellidos" />
                     <h:inputText id="apellidos" value="#{proveedoresController.selected.apellidos}" title="#{bundle.EditProveedoresTitle_apellidos}" />
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_fechaIngreso}" for="fechaIngreso" />
-                    <h:inputText id="fechaIngreso" value="#{proveedoresController.selected.fechaIngreso}" title="#{bundle.EditProveedoresTitle_fechaIngreso}" >
+                    <h:inputText id="fechaIngreso" value="#{proveedoresController.selected.fechaIngreso}" title="#{bundle.EditProveedoresTitle_fechaIngreso}" label="Fecha de ingreso" >
                         <f:convertDateTime pattern="MM/dd/yyyy" />
                     </h:inputText>
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_direccion}" for="direccion" />
                     <h:inputText id="direccion" value="#{proveedoresController.selected.direccion}" title="#{bundle.EditProveedoresTitle_direccion}" />
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_telefono}" for="telefono" />
-                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.EditProveedoresTitle_telefono}" />
+                    <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.EditProveedoresTitle_telefono}" label="Teléfono"/>
                     <h:outputLabel value="#{bundle.EditProveedoresLabel_tipoId}" for="tipoId" />
                     <h:selectOneMenu id="tipoId" value="#{proveedoresController.selected.tipoId}" title="#{bundle.EditProveedoresTitle_tipoId}" required="true" requiredMessage="#{bundle.EditProveedoresRequiredMessage_tipoId}">
                         <f:selectItems value="#{tiposIdController.itemsAvailableSelectOne}"/>
