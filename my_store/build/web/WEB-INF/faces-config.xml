@@ -14,5 +14,9 @@
 		<validator-id>validarInt</validator-id>
 		<validator-class>udem.edu.co.validator.ValidarNumero</validator-class>
 	</validator>
+        <validator>
+		<validator-id>validarPass</validator-id>
+		<validator-class>udem.edu.co.validator.ValidarNumero</validator-class>
+	</validator>
     
 </faces-config>

@@ -3,14 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/administrador.xhtml</file>
             <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/login.xhtml</file>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/Bundle.properties</file>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/clientes/Create.xhtml</file>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/resources/style/iotcss.css</file>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/index.xhtml</file>
-            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/resources/css/jsfcrud.css</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/udem/edu/co/validator/ValiarPass.java</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/users/Create.xhtml</file>
             <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/template.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/proveedores/Edit.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/administrador.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/clientes/Edit.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/udem/edu/co/entitys/Users.java</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/clientes/Create.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/proveedores/Create.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/udem/edu/co/login/DataConnect.java</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/index.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/ventas/Edit.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/udem/edu/co/entitys/TiposId.java</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/ventas/Create.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/src/java/udem/edu/co/validator/ValidarNumero.java</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/productos/Edit.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/tiposId/Create.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/productos/Create.xhtml</file>
+            <file>file:/C:/Users/jario/Documents/UDEM/Desarrollo%20de%20software%20web/Practicas/Practica1/my_store/web/users/Edit.xhtml</file>
         </group>
     </open-files>
 </project-private>

@@ -19,17 +19,23 @@
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_password}" for="password" />
-                    <h:inputSecret id="passwordinit"  required="true" />
+                    <h:inputSecret id="passwordinit"  required="true" >
+                    </h:inputSecret>
                     <h:outputLabel value="Repetir contraseña" for="password" />
-                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}"/>
+                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}">
+                        <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"   > </f:validateRegex>
+                        
+                    </h:inputSecret>
+                    
                 </h:panelGrid>
                 <h:panelGroup id="messagePanel" layout="block">
                 <br />
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table" />
                 <br />
                 <h:message for = "uid" style = "color:green" />
                 <br />
-            </h:panelGroup>
+                <h:message for = "password" style = "color:green"  />
+                </h:panelGroup>
                 <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" />
                 <br />
                 <br />
