@@ -18,13 +18,15 @@
                     <h:outputLabel value="#{bundle.EditUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.EditUsersTitle_uname}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.EditUsersLabel_password}" for="password" />
-                    <h:inputText id="password" value="#{usersController.selected.password}" title="#{bundle.EditUsersTitle_password}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_password}"/>
+                    <h:inputText id="password" value="#{usersController.selected.password}" title="#{bundle.EditUsersTitle_password}" required="true" requiredMessage="#{bundle.EditUsersRequiredMessage_password}" validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
+                    <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
+                        </f:validateRegex>
                 </h:panelGrid>
                 <h:panelGroup id="messagePanel" layout="block">
-                    <br />
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 <br />
-                 <h:message for = "uid" style = "color:green" />
+                <h:message for = "uid" style = "color:green" />
+                <br />
+                <h:message for = "password" style = "color:green" />
                 <br />
             </h:panelGroup>
                 <h:commandLink action="#{usersController.update}" value="#{bundle.EditUsersSaveLink}"/>

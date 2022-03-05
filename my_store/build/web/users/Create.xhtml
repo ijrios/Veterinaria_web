@@ -13,7 +13,7 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
-                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}">
+                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  >
                         <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
@@ -22,19 +22,17 @@
                     <h:inputSecret id="passwordinit"  required="true" >
                     </h:inputSecret>
                     <h:outputLabel value="Repetir contraseña" for="password" />
-                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}">
-                        <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"   > </f:validateRegex>
-                        
+                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
+                        <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
+                        </f:validateRegex>
                     </h:inputSecret>
                     
                 </h:panelGrid>
                 <h:panelGroup id="messagePanel" layout="block">
                 <br />
-                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table" />
-                <br />
                 <h:message for = "uid" style = "color:green" />
                 <br />
-                <h:message for = "password" style = "color:green"  />
+                <h:message for = "password" style = "color:green"  ></h:message>
                 </h:panelGroup>
                 <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" />
                 <br />
