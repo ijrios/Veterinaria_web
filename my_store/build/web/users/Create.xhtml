@@ -19,11 +19,8 @@
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
                     <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
                     <h:outputLabel value="#{bundle.CreateUsersLabel_password}" for="password" />
-                    <h:inputSecret id="passwordinit"  required="true" >
-                    </h:inputSecret>
-                    <h:outputLabel value="Repetir contraseña" for="password" />
                     <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" 
-                                   validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)">
+                                   validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)" label="Contraseña 2">
                         <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
                         </f:validateRegex>
                     </h:inputSecret>

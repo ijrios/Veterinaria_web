@@ -1,17 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <ui:composition template="/template.xhtml">
-        <ui:define name="title">
-            <h:outputText value="#{bundle.CreateUsersTitle}"></h:outputText>
-        </ui:define>
-        <ui:define name="body">
-            <h:form>
-                <h:panelGrid columns="2">
+    <h:head>
+        <title>h</title>
+        <link href="../resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
+        <link href="../resources/style/iotcss2.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+         <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br /><center><h1 class ="title">IOT STORE</h1></center>
+                <center><li class="navbar__links">
+                        <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
+                        <h:link outcome="/clientes/List.xhtml" class="navbar__links" value="Clientes "/>
+                        <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
+                        <h:link outcome="/productos/List.xhtml" class="navbar__links" value="Productos "/>
+                        <h:link outcome="/ventas/List.xhtml" class="navbar__links" value="Ventas"/>
+                    </li></center>
+            </ul>
+        </nav>
+        
+        <br></br><br></br>
+        
+        
+        <h:form>
+            <div id ="cuadro">
+                <center>
+            <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
                     <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  label="Id de usuario">
                         <f:validator validatorId="validarInt"></f:validator>
@@ -26,21 +45,19 @@
                     </h:inputSecret>
                     
                 </h:panelGrid>
+                  </center>
+
+                </div>
+            <center>
                 <h:panelGroup id="messagePanel" layout="block">
                 <br />
                 <h:message for = "uid" style = "color:green" />
                 <br />
                 <h:message for = "password" style = "color:green"  ></h:message>
                 </h:panelGroup>
-                <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" />
-                <br />
-                <br />
-                <h:commandLink action="#{usersController.prepareList}" value="#{bundle.CreateUsersShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.CreateUsersIndexLink}"/>
+                <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" class="nn"/>
+                </center>
             </h:form>
-        </ui:define>
-    </ui:composition>
-
+        
+    </h:body>
 </html>
