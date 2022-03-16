@@ -30,6 +30,8 @@
         <h:form>
             <div id ="cuadro">
                 <center>
+                <h2><h:outputText value="#{bundle.CreateUsersTitle}" class ="title2"></h:outputText></h2>
+                <br></br>
             <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
                     <br />
@@ -62,9 +64,7 @@
                 </h:panelGroup>
                 <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}"  class="nn" />
                 <br />
-                <br />
                 <h:commandLink action="#{usersController.prepareList}" value="#{bundle.CreateUsersShowAllLink}" immediate="true"  class="navbar__links2"/>
-                <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.CreateUsersIndexLink}"  class="navbar__links2"/>
                 </center>

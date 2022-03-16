@@ -76,7 +76,7 @@ public class VentasController implements Serializable {
     public String prepareCreate() {
         current = new Ventas();
         selectedItemIndex = -1;
-        return "Create";
+        return "Create_1";
     }
 
     public String create() {
@@ -93,7 +93,7 @@ public class VentasController implements Serializable {
     public String prepareEdit() {
         current = (Ventas) getItems().getRowData();
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
-        return "Edit";
+        return "Edit_1";
     }
 
     public String update() {

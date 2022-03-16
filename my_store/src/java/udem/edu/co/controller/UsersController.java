@@ -76,7 +76,7 @@ public class UsersController implements Serializable {
     public String prepareCreate() {
         current = new Users();
         selectedItemIndex = -1;
-        return "Create";
+        return "Create1";
     }
 
     public String create() {
@@ -93,7 +93,7 @@ public class UsersController implements Serializable {
     public String prepareEdit() {
         current = (Users) getItems().getRowData();
         selectedItemIndex = pagination.getPageFirstItem() + getItems().getRowIndex();
-        return "Edit";
+        return "Edit_1";
     }
 
     public String update() {

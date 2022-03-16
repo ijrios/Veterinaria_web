@@ -29,6 +29,8 @@
         
          <h:form>
              <center>
+             <h2><h:outputText value="#{bundle.EditVentasTitle}" class ="title2"></h:outputText></h2>
+             <br></br>
              <div id="cuadro">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.EditVentasLabel_idPago}" for="idPago" />
@@ -58,15 +60,13 @@
                 <h:message for = "idPago" style = "color:green" />
                 <br />
             </h:panelGroup>
-                <h:commandLink action="#{ventasController.update}" value="#{bundle.EditVentasSaveLink}"/>
+                <h:commandLink action="#{ventasController.update}" value="#{bundle.EditVentasSaveLink}" class="navbar__links2"/>
                 <br />
+                <h:link outcome="View" value="#{bundle.EditVentasViewLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="View" value="#{bundle.EditVentasViewLink}"/>
+                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.EditVentasShowAllLink}" immediate="true" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.EditVentasShowAllLink}" immediate="true"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.EditVentasIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditVentasIndexLink}" class="navbar__links2"/>
                 </center>
             </h:form>
         

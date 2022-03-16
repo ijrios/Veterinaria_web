@@ -30,6 +30,7 @@
          <h:form>
              <center>
                  <h2><h:outputText value="#{bundle.CreateClientesTitle}" class ="title2"></h:outputText></h2>
+                 <br></br>
              <div id="cuadro">
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateClientesLabel_id}" for="id" />
@@ -69,9 +70,7 @@
                 
                 <h:commandLink action="#{clientesController.create}" value="#{bundle.CreateClientesSaveLink}" class="navbar__links2"/>
                 <br />
-                <br />
                 <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.CreateClientesShowAllLink}" immediate="true" class="navbar__links2"/>
-                <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.CreateClientesIndexLink}" class="navbar__links2"/>
                 </center>
