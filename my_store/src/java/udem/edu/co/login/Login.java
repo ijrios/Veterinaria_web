@@ -65,7 +65,10 @@ public class Login implements Serializable {
 		this.user = user;
 	}
 
-	//validate login
+	/**
+         * Metodo para validar el usuario 
+         * @return 
+         */
 	public String validateUsernamePassword() {
 		boolean valid = LoginDAO.validate(user, pwd);
 		if (valid) {
@@ -78,6 +81,26 @@ public class Login implements Serializable {
 					new FacesMessage(FacesMessage.SEVERITY_WARN,
 							"Incorrect Username and Passowrd",
 							"Please enter correct username and Password"));
+			return "login";
+		}
+	}
+        
+        /**
+         * Metodo para registrar el usuario 
+         * @return 
+         */
+        public String createUsers() {
+                boolean valid1 = true;
+		if (valid1) {
+			HttpSession session = SessionUtils.getSession();
+			session.setAttribute("username", user);
+			return "registro";
+		} else {
+			FacesContext.getCurrentInstance().addMessage(
+					null,
+					new FacesMessage(FacesMessage.SEVERITY_WARN,
+							"Cerrando sesión",
+							"Autentiquese nuevamente"));
 			return "login";
 		}
 	}
