@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Registro</title>
          <link href="resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
@@ -27,6 +28,7 @@
         <br></br><br></br>
         
         <h:form>
+            <p:tooltip/>
             <div id ="cuadro">
                 <center>
             <h:panelGrid columns="2">
@@ -55,9 +57,9 @@
             <center>
                 <h:panelGroup id="messagePanel" layout="block">
                     <br />
-                    <h:message for = "uid" style = "color:green" />
+                    <p:message for = "uid" style = "color:green" />
                     <br />
-                    <h:message for = "password" style = "color:green"  ></h:message>
+                    <p:message for = "password" style = "color:green"  ></p:message>
                 </h:panelGroup>
                 <h:commandLink action="#{usersController.create}" value="#{bundle.CreateUsersSaveLink}" class="navbar__links2" />
 

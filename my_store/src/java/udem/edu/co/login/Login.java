@@ -26,6 +26,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
+import org.primefaces.context.RequestContext;
 import udem.edu.co.database.SessionUtils;
 
 
@@ -79,8 +80,8 @@ public class Login implements Serializable {
 			FacesContext.getCurrentInstance().addMessage(
 					null,
 					new FacesMessage(FacesMessage.SEVERITY_WARN,
-							"Incorrect Username and Passowrd",
-							"Please enter correct username and Password"));
+							"Nombre de usuario y contraseña incorrectos",
+							"Ingrese el nombre de usuario y la contraseña correcta"));
 			return "login";
 		}
 	}
