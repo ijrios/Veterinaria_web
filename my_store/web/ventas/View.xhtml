@@ -14,6 +14,7 @@
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
+                <div id ="cuadro3">
                 <h:panelGrid columns="2">
                     <h:outputText value="#{bundle.ViewVentasLabel_idPago}"/>
                     <h:outputText value="#{ventasController.selected.idPago}" title="#{bundle.ViewVentasTitle_idPago}"/>
@@ -28,18 +29,17 @@
                     <h:outputText value="#{bundle.ViewVentasLabel_idProducto}"/>
                     <h:outputText value="#{ventasController.selected.idProducto}" title="#{bundle.ViewVentasTitle_idProducto}"/>
                 </h:panelGrid>
+                    </div>
                 <br />
-                <h:commandLink action="#{ventasController.destroyAndView}" value="#{bundle.ViewVentasDestroyLink}"/>
+                <h:commandLink action="#{ventasController.destroyAndView}" value="#{bundle.ViewVentasDestroyLink}" class="navbar__links2"/>
                 <br />
+                <h:link outcome="Edit" value="#{bundle.ViewVentasEditLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewVentasEditLink}"/>
+                <h:commandLink action="#{ventasController.prepareCreate}" value="#{bundle.ViewVentasCreateLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{ventasController.prepareCreate}" value="#{bundle.ViewVentasCreateLink}" />
+                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.ViewVentasShowAllLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{ventasController.prepareList}" value="#{bundle.ViewVentasShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewVentasIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewVentasIndexLink}" class="navbar__links2"/>
 
             </h:form>
         </ui:define>

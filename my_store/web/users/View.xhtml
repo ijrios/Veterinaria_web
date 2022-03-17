@@ -14,27 +14,27 @@
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
+                <div id ="cuadro3">
                 <h:panelGrid columns="2">
-                    <h:outputText value="#{bundle.ViewUsersLabel_uid}"/>
-                    <h:outputText value="#{usersController.selected.uid}" title="#{bundle.ViewUsersTitle_uid}"/>
+                    <h:outputText value="#{bundle.ViewUsersLabel_uid} "/>
+                    <h:outputText value="#{usersController.selected.uid}" title="#{bundle.ViewUsersTitle_uid} "/>
                     <h:outputText value="#{bundle.ViewUsersLabel_uname}"/>
-                    <h:outputText value="#{usersController.selected.uname}" title="#{bundle.ViewUsersTitle_uname}"/>
+                    <h:outputText value="#{usersController.selected.uname}" title="#{bundle.ViewUsersTitle_uname} "/>
                     <h:outputText value="#{bundle.ViewUsersLabel_password}"/>
-                    <h:outputText value="#{usersController.selected.password}" title="#{bundle.ViewUsersTitle_password}"/>
+                    <h:outputText value="#{usersController.selected.password}" title="#{bundle.ViewUsersTitle_password} "/>
                 </h:panelGrid>
+                     </div>
                 <br />
-                <h:commandLink action="#{usersController.destroyAndView}" value="#{bundle.ViewUsersDestroyLink}"/>
+                <h:commandLink action="#{usersController.destroyAndView}" value="#{bundle.ViewUsersDestroyLink}" class="navbar__links2"/>
                 <br />
+                <h:link outcome="Edit" value="#{bundle.ViewUsersEditLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewUsersEditLink}"/>
+                <h:commandLink action="#{usersController.prepareCreate}" value="#{bundle.ViewUsersCreateLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{usersController.prepareCreate}" value="#{bundle.ViewUsersCreateLink}" />
+                <h:commandLink action="#{usersController.prepareList}" value="#{bundle.ViewUsersShowAllLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{usersController.prepareList}" value="#{bundle.ViewUsersShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewUsersIndexLink}"/>
-
+                <h:link outcome="/index" value="#{bundle.ViewUsersIndexLink}" class="navbar__links2"/>
+             
             </h:form>
         </ui:define>
     </ui:composition>

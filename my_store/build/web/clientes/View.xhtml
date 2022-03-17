@@ -14,6 +14,7 @@
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
+                <div id="cuadro3">
                 <h:panelGrid columns="2">
                     <h:outputText value="#{bundle.ViewClientesLabel_id}"/>
                     <h:outputText value="#{clientesController.selected.id}" title="#{bundle.ViewClientesTitle_id}"/>
@@ -32,18 +33,17 @@
                     <h:outputText value="#{bundle.ViewClientesLabel_tipoId}"/>
                     <h:outputText value="#{clientesController.selected.tipoId}" title="#{bundle.ViewClientesTitle_tipoId}"/>
                 </h:panelGrid>
+                    </div>
                 <br />
-                <h:commandLink action="#{clientesController.destroyAndView}" value="#{bundle.ViewClientesDestroyLink}"/>
+                <h:commandLink action="#{clientesController.destroyAndView}" value="#{bundle.ViewClientesDestroyLink}" class="navbar__links2"/>
                 <br />
+                <h:link outcome="Edit" value="#{bundle.ViewClientesEditLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewClientesEditLink}"/>
+                <h:commandLink action="#{clientesController.prepareCreate}" value="#{bundle.ViewClientesCreateLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{clientesController.prepareCreate}" value="#{bundle.ViewClientesCreateLink}" />
+                <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.ViewClientesShowAllLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.ViewClientesShowAllLink}"/>
-                <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewClientesIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewClientesIndexLink}" class="navbar__links2"/>
 
             </h:form>
         </ui:define>

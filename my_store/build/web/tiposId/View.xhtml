@@ -14,24 +14,24 @@
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
+                <div id ="cuadro3">
                 <h:panelGrid columns="2">
                     <h:outputText value="#{bundle.ViewTiposIdLabel_tipoId}"/>
                     <h:outputText value="#{tiposIdController.selected.tipoId}" title="#{bundle.ViewTiposIdTitle_tipoId}"/>
                     <h:outputText value="#{bundle.ViewTiposIdLabel_description}"/>
                     <h:outputText value="#{tiposIdController.selected.description}" title="#{bundle.ViewTiposIdTitle_description}"/>
                 </h:panelGrid>
+                    </div>
                 <br />
-                <h:commandLink action="#{tiposIdController.destroyAndView}" value="#{bundle.ViewTiposIdDestroyLink}"/>
-                <br />
+                <h:commandLink action="#{tiposIdController.destroyAndView}" value="#{bundle.ViewTiposIdDestroyLink}" class="navbar__links2"/>
                 <br />
                 <h:link outcome="Edit" value="#{bundle.ViewTiposIdEditLink}"/>
                 <br />
-                <h:commandLink action="#{tiposIdController.prepareCreate}" value="#{bundle.ViewTiposIdCreateLink}" />
+                <h:commandLink action="#{tiposIdController.prepareCreate}" value="#{bundle.ViewTiposIdCreateLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{tiposIdController.prepareList}" value="#{bundle.ViewTiposIdShowAllLink}"/>
+                <h:commandLink action="#{tiposIdController.prepareList}" value="#{bundle.ViewTiposIdShowAllLink}" class="navbar__links2"/>
                 <br />
-                <br />
-                <h:link outcome="/index" value="#{bundle.ViewTiposIdIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewTiposIdIndexLink}" class="navbar__links2"/>
 
             </h:form>
         </ui:define>
