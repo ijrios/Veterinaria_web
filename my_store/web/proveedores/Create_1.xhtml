@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
     <h:head>
         <title>Crear cliente</title>
@@ -28,6 +29,7 @@
         
         
          <h:form>
+             <p:tooltip/>
              <center>
              <h2><h:outputText value="#{bundle.CreateProveedoresTitle}" class ="title2"></h:outputText></h2>
              <br></br>
@@ -59,11 +61,11 @@
                 </div>
                   <h:panelGroup id="messagePanel" layout="block">
                 <br />
-                <h:message for = "fechaIngreso" style = "color:green" />
+                <p:message for = "fechaIngreso" style = "color:green" />
                 <br />
-                <h:message for = "telefono" style = "color:green" />
+                <p:message for = "telefono" style = "color:green" />
                 <br />
-                <h:message for = "id" style = "color:green" />
+                <p:message for = "id" style = "color:green" />
                 <br />
             </h:panelGroup>
                 <h:commandLink action="#{proveedoresController.create}" value="#{bundle.CreateProveedoresSaveLink}" class="navbar__links2" />

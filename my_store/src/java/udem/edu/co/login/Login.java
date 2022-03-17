@@ -102,6 +102,7 @@ public class Login implements Serializable {
 					new FacesMessage(FacesMessage.SEVERITY_WARN,
 							"Cerrando sesión",
 							"Autentiquese nuevamente"));
+                        
 			return "login";
 		}
 	}
