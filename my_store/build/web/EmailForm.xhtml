@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
+         <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+        
+     <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br />
+                <br /><center><h1 class ="title">IOT STORE</h1></center>
+                <center><li class="navbar__links">
+                        <h:link class="navbar__links" value="Inicio "/>
+                        <h:link class="navbar__links" value="Clientes "/>
+                        <h:link class="navbar__links" value="Provedores "/>
+                        <h:link class="navbar__links" value="Productos "/>
+                        <h:link class="navbar__links" value="Ventas"/>
+                    </li></center>
+            </ul>
+        </nav>
+
+<br></br><br></br>
+
+<center>
+    <div id ="cuadro">
+        <form action="EmailSendingServlet" method="post">
+            <caption><h2>Enviar contraseña</h2></caption>
+            <br></br>
+            <table border="0" width="35%" align="center">
+
+                <td width="100%">Correo electrónico</td>
+
+                <td><input type="text" name="recipient" size="35"/></td>
+
+                <td colspan="2" align="center"><input type="submit" value="Send"/></td>
+
+            </table>
+
+        </form>
+         </div>
+         <h:form>
+            <center>
+            <br /><h:commandButton action="#{login.logout}" value="Atrás"  class="boton1" ></h:commandButton>
+            </center>
+         </h:form>
+   
+    </center>
+    </h:body>
+</html>
+

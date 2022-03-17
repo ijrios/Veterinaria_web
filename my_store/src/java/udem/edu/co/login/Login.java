@@ -107,6 +107,27 @@ public class Login implements Serializable {
 		}
 	}
 
+        /**
+         * Metodo para enviar contraseña
+         * @return 
+         */
+        public String forgotPass() {
+                boolean valid1 = true;
+		if (valid1) {
+			HttpSession session = SessionUtils.getSession();
+			session.setAttribute("username", user);
+			return "EmailForm.xhtml";
+		} else {
+			FacesContext.getCurrentInstance().addMessage(
+					null,
+					new FacesMessage(FacesMessage.SEVERITY_WARN,
+							"Cerrando sesión",
+							"Autentiquese nuevamente"));
+                        
+			return "login";
+		}
+	}
+        
 	//logout event, invalidate session
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();

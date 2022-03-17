@@ -228,3 +228,23 @@ h2{
     text-decoration: none;
     padding: 0 0.2rem;
 }
+
+.boton2{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px 5px;
+    height: 2%;
+    width: 20%;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background: #4837ff;
+    color: #fff;
+    
+}
+
+.boton2:hover{
+    background: #f77062;
+    transition: all 0.4s ease;
+}
