@@ -110,9 +110,6 @@ tr.jsfcrud_even_row {
     color:#fff
 }
 
-.texto-encima{
-    font-style: italic
-}
 .boton1{
     display: flex;
     justify-content: center;
@@ -163,9 +160,6 @@ h2{
     color:#fff
 }
 
-.texto-encima{
-    font-style: italic
-}
 
 #cuadro{
     width: 58%;

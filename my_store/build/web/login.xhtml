@@ -19,7 +19,8 @@
                         <h:link outcome="/clientes/List.xhtml" class="navbar__links" value="Clientes "/>
                         <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
                         <h:link outcome="/productos/List.xhtml" class="navbar__links" value="Productos "/>
-                        <h:link outcome="/ventas/List.xhtml" class="navbar__links" value="Ventas"/>
+                        <h:link outcome="/ventas/List.xhtml" class="navbar__links" value="Ventas" />
+                       
                     </li></center>
             </ul>
         </nav>
@@ -34,7 +35,7 @@
                  <center>
                      <h:outputText value="Usuario " />
                      <br/>
-                     <h:inputText id="username"  value="#{login.user}"></h:inputText>
+                     <h:inputText id="username"  value="#{login.user}"  ></h:inputText>
                      <br/>
                      <p:message for="username"></p:message>
                      <br></br><br></br>
@@ -49,11 +50,11 @@
                      <h:commandButton action="#{login.validateUsernamePassword}"
                                       value="Login" class="boton2"></h:commandButton>
                      <br></br>
-                     <h:commandButton action="#{login.createUsers()}"
-                                      value="Crear Usuario" class="boton2" ></h:commandButton>
+                     <h:commandLink action="#{login.createUsers()}"
+                                      value="Crear Usuario" class="navbar__links2"> </h:commandLink>
                      <br></br>
-                     <h:commandButton action="#{login.forgotPass()}"
-                                      value="Olvidé contraseña" class="boton2"  ></h:commandButton>
+                     <h:commandLink action="#{login.forgotPass()}"
+                                      value="Olvidé contraseña" class="navbar__links2"> </h:commandLink>
                     </center>
                 
                 </div>
@@ -63,6 +64,8 @@
             </center>
                     
              </h:form>
+        
+        
         
     </h:body>
 </html>
