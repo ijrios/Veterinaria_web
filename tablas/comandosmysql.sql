@@ -103,7 +103,8 @@ CREATE TABLE ventas  (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO users VALUES (0214, 'jose','jose');
+INSERT INTO users VALUES (2027, 'joserios055@gmail','@Bastille00');
+INSERT INTO users VALUES (2027, 'dubercode@gmail','@BombaEstereo00');
 
 -- ----------------------------
 -- Records of tipos_id
