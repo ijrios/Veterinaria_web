@@ -26,9 +26,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
-import org.primefaces.context.RequestContext;
 import udem.edu.co.database.SessionUtils;
-
 
 
 
@@ -68,7 +66,7 @@ public class Login implements Serializable {
 
 	/**
          * Metodo para validar el usuario 
-         * @return 
+         * @return al login o index dependiendo de la respuesta
          */
 	public String validateUsernamePassword() {
 		boolean valid = LoginDAO.validate(user, pwd);
@@ -88,7 +86,7 @@ public class Login implements Serializable {
         
         /**
          * Metodo para registrar el usuario 
-         * @return 
+         * @return al login o registro dependiendo de la respuesta
          */
         public String createUsers() {
                 boolean valid1 = true;
@@ -109,14 +107,14 @@ public class Login implements Serializable {
 
         /**
          * Metodo para enviar contraseña
-         * @return 
+         * @return al login o emailForm dependiendo de la respuesta
          */
         public String forgotPass() {
                 boolean valid1 = true;
 		if (valid1) {
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", user);
-			return "EmailForm.xhtml";
+			return "emailForm.xhtml";
 		} else {
 			FacesContext.getCurrentInstance().addMessage(
 					null,
@@ -128,7 +126,10 @@ public class Login implements Serializable {
 		}
 	}
         
-	//logout event, invalidate session
+	/**
+         * Evento de cierre de sesión, invalidar sesión
+         * @return al login de la aplicación
+         */
 	public String logout() {
 		HttpSession session = SessionUtils.getSession();
 		session.invalidate();

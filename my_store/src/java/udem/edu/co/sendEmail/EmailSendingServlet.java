@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
  * @since 17/03/2022
  * @version 5
  * 
- * Esta clase valida que el valor ingresado en el input sea entero
+ * Esta clase envia los correos electronicos, trae información de la pagina emailForm.xhtml - action="EmailSendingServlet" method="post"
  * Bibliografía:  www.codejava.net
  */
 
@@ -60,14 +60,14 @@ public class EmailSendingServlet extends HttpServlet {
 
             if (Countrow.equals("1")) {
 
-                System.out.println("Invalid Email Id !");
+                System.out.println("Correo invalido !");
 
             } else {
 
                 // reads form fields
                 String recipient = request.getParameter("recipient");
                 String subject = "Contraseña de acceso a la cuenta";
-                String content = "La contraseña es: " +Countrow ;
+                String content = "Usted ha pedido obtener su contraseña de acceso a la cuenta del sistema de gestión de base de datos. La contraseña es: " +Countrow ;
 
                 String resultMessage = "";
 
@@ -80,7 +80,7 @@ public class EmailSendingServlet extends HttpServlet {
                     resultMessage = "Error: " + ex.getMessage();
                 } finally {
                     request.setAttribute("Message", resultMessage);
-                    getServletContext().getRequestDispatcher("/Result.jsp").forward(
+                    getServletContext().getRequestDispatcher("/result.jsp").forward(
                             request, response);
                 }
             }

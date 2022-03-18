@@ -23,7 +23,12 @@ import java.sql.SQLException;
 
 public class LoginDAO {
 
-        
+        /**
+         * Este metodo crea la consulta con la base datos para extraer datos y validar login
+         * @param user
+         * @param password
+         * @return estado del login
+         */
 	public static boolean validate(String user, String password) {
 		Connection con = null;
 		PreparedStatement ps = null;

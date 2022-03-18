@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMessage;
  * @since 17/03/2022
  * @version 5
  * 
- * Esta clase valida que el valor ingresado en el input sea entero
+ * Esta clase crea las conexiones a los servidores de google para enviar correos
  * Bibliografía:  www.codejava.net
  */
 

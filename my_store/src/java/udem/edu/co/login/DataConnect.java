@@ -22,6 +22,10 @@ import java.sql.DriverManager;
 
 public class DataConnect {
 
+        /**
+         * Este evento crea la conexipon a la base de datos
+         * @return conexión generada
+         */
 	public static Connection getConnection() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -35,6 +39,10 @@ public class DataConnect {
 		}
 	}
 
+        /**
+         * Este evento cierra la conexión con la base de datos
+         * @param con - conexion a la base de datos
+         */
 	public static void close(Connection con) {
 		try {
 			con.close();
