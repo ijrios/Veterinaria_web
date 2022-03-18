@@ -110,8 +110,8 @@ public class Login implements Serializable {
          * @return al login o emailForm dependiendo de la respuesta
          */
         public String forgotPass() {
-                boolean valid1 = true;
-		if (valid1) {
+                boolean valid2 = true;
+		if (valid2) {
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", user);
 			return "emailForm.xhtml";
