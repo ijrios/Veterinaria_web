@@ -8,23 +8,24 @@
 
     <h:head>
         <title>Editar cliente</title>
-        <link href="../resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
-        <link href="../resources/style/iotcss2.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="login2/css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="login2/css/main.css"/>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
     </h:head>
     <h:body>
          <nav class ="navbar">
             <ul class="navbar__menu">
-                <br /><center><h1 class ="title" >IOT STORE</h1></center>
+                <br></br>
+                <center><h1 class ="title" >IOT STORE</h1></center>
                 <center><li class="navbar__links">
                         <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
-                        <h:link outcome="/clientes/List.xhtml" class="navbar__links" value="Clientes "/>
+                        <h:link outcome="/clientes/List_1.xhtml" class="navbar__links" value="Clientes "/>
                         <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
                         <h:link outcome="/productos/List.xhtml" class="navbar__links" value="Productos "/>
                         <h:link outcome="/ventas/List.xhtml" class="navbar__links" value="Ventas"/>
                     </li></center>
             </ul>
         </nav>
-        
         <br></br>
         
          <h:form>
@@ -65,7 +66,7 @@
             </h:panelGroup>
                 <h:commandLink action="#{clientesController.update}" value="#{bundle.EditClientesSaveLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="View" value="#{bundle.EditClientesViewLink}" class="navbar__links2" />
+                <h:link outcome="View_1" value="#{bundle.EditClientesViewLink}" class="navbar__links2" />
                 <br />
                 <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.EditClientesShowAllLink}" immediate="true" class="navbar__links2"/>
                 <br />

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Ver cliente</title>
+        <link rel="stylesheet" type="text/css" href="login2/css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="login2/css/main.css"/>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body id="main3">
+         <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br></br>
+                <center><h1 class ="title" >IOT STORE</h1></center>
+                <center><li class="navbar__links">
+                        <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
+                        <h:link outcome="/clientes/List_1.xhtml" class="navbar__links" value="Clientes "/>
+                        <h:link outcome="/proveedores/List.xhtml" class="navbar__links" value="Provedores "/>
+                        <h:link outcome="/productos/List.xhtml" class="navbar__links" value="Productos "/>
+                        <h:link outcome="/ventas/List.xhtml" class="navbar__links" value="Ventas"/>
+                    </li></center>
+            </ul>
+        </nav>
+        
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <center>
+         <h:form>
+                <div id="cuadro3">
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewClientesLabel_id}"/>
+                    <h:outputText value="#{clientesController.selected.id}" title="#{bundle.ViewClientesTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_nombres}"/>
+                    <h:outputText value="#{clientesController.selected.nombres}" title="#{bundle.ViewClientesTitle_nombres}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_apellidos}"/>
+                    <h:outputText value="#{clientesController.selected.apellidos}" title="#{bundle.ViewClientesTitle_apellidos}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_fechaIngreso}"/>
+                    <h:outputText value="#{clientesController.selected.fechaIngreso}" title="#{bundle.ViewClientesTitle_fechaIngreso}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewClientesLabel_direccion}"/>
+                    <h:outputText value="#{clientesController.selected.direccion}" title="#{bundle.ViewClientesTitle_direccion}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_telefono}"/>
+                    <h:outputText value="#{clientesController.selected.telefono}" title="#{bundle.ViewClientesTitle_telefono}"/>
+                    <h:outputText value="#{bundle.ViewClientesLabel_tipoId}"/>
+                    <h:outputText value="#{clientesController.selected.tipoId}" title="#{bundle.ViewClientesTitle_tipoId}"/>
+                </h:panelGrid>
+                    </div>
+                <br />
+                <h:commandLink action="#{clientesController.destroyAndView}" value="#{bundle.ViewClientesDestroyLink}" class="navbar__links2"/>
+                <br />
+                <h:link outcome="Edit_1" value="#{bundle.ViewClientesEditLink}" class="navbar__links2"/>
+                <br />
+                <h:commandLink action="#{clientesController.prepareCreate}" value="#{bundle.ViewClientesCreateLink}" class="navbar__links2"/>
+                <br />
+                <h:commandLink action="#{clientesController.prepareList}" value="#{bundle.ViewClientesShowAllLink}" class="navbar__links2"/>
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewClientesIndexLink}" class="navbar__links2"/>
+
+            </h:form>
+        </center>
+        <h:form>
+            <center>
+            <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" class="boton1" ></h:commandButton>
+            </center>
+            <br></br><br></br>
+         </h:form>
+        
+    </h:body>
+</html>

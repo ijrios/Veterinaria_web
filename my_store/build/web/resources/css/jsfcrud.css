@@ -1,25 +1,47 @@
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+}
+
+
 root { 
     display: block;
 }
 
-body {
-    font-family: 'Kumbh Sans', Helvetica, sans-serif;
-    color: #131313131313;
-    background-color: #fff;
-    font-size: small;
-   
-}
 
-a {
-    color: #131313;
-}
 
 table {
     empty-cells: show;
 }
 
 form.jsfcrud_list_form th, td th {
-    font-size: x-small;
+    font-size: 14px;
     color: #cccccc;
     border-top-style: solid;
     border-bottom-style: solid;
@@ -45,7 +67,7 @@ form.jsfcrud_list_form th, td th {
 td {
     vertical-align: top;
     padding-bottom: 8px;
-    font-size: small;
+    font-size: 14px;
 }
 
 form.jsfcrud_list_form td, td td {
@@ -87,7 +109,7 @@ tr.jsfcrud_even_row {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: Poppins-Regular;
 }
 
 .navbar{
@@ -106,8 +128,30 @@ tr.jsfcrud_even_row {
     text-decoration: none;
     padding: 0 0.2rem;
 }
+
+body {
+    font-family: Poppins-Regular;
+    color: #131313;
+    background-color: #fff;
+    font-size: small;
+   
+}
+
+a {
+    color: #131313;
+    font-family: Poppins-Regular;
+    line-height: 1.2;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
 .title{
+    font-family: Poppins-Regular;
     color:#fff
+        
 }
 
 .boton1{
@@ -135,7 +179,7 @@ tr.jsfcrud_even_row {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: Poppins-Regular;
 }
 
 .navbar{
@@ -158,6 +202,7 @@ h2{
 }
 .title{
     color:#fff
+        
 }
 
 
@@ -177,6 +222,11 @@ h2{
      background: url(style/1.svg) no-repeat 0px 0px;
      background-position: center;
      
+}
+
+#main4{
+     background: url(style/1.svg) no-repeat 0px 0px;
+     background-position: center;
 }
 
 #cuadro2{
