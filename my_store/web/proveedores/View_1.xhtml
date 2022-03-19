@@ -3,18 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
-    <ui:composition template="/template.xhtml">
-        <ui:define name="title">
-            <h:outputText value="#{bundle.ViewProveedoresTitle}"></h:outputText>
-        </ui:define>
-        <ui:define name="body">
-            <h:panelGroup id="messagePanel" layout="block">
+    <h:head>
+        <title>Proveedores</title>
+        <link rel="stylesheet" type="text/css" href="logincss/css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="logincss/css/main.css"/>
+        <link href="../resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
+        <link href="../resources/style/iotcss2.css" rel="stylesheet" type="text/css"/>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+         <nav class ="navbar">
+            <ul class="navbar__menu">
+                <br></br>
+                <center><h1 class ="title" >IOT STORE</h1></center>
+                <center><li class="navbar__links">
+                        <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
+                        <h:link outcome="/clientes/List_1.xhtml" class="navbar__links" value="Clientes "/>
+                        <h:link outcome="/proveedores/List_1.xhtml" class="navbar__links" value="Provedores "/>
+                        <h:link outcome="/productos/List_1.xhtml" class="navbar__links" value="Productos "/>
+                        <h:link outcome="/ventas/List_1.xhtml" class="navbar__links" value="Ventas"/>
+                    </li></center>
+            </ul>
+        </nav>
+        <br></br><br></br>
+        <center>
+          <h:panelGroup id="messagePanel" layout="block">
                 <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
             </h:panelGroup>
             <h:form>
-                <div id="cuadro3">
+                <div id="cuadro">
                 <h:panelGrid columns="2">
                     <h:outputText value="#{bundle.ViewProveedoresLabel_id}"/>
                     <h:outputText value="#{proveedoresController.selected.id}" title="#{bundle.ViewProveedoresTitle_id}"/>
@@ -44,9 +64,15 @@
                 <h:commandLink action="#{proveedoresController.prepareList}" value="#{bundle.ViewProveedoresShowAllLink}" class="navbar__links2"/>
                 <br />
                 <h:link outcome="/index" value="#{bundle.ViewProveedoresIndexLink}" class="navbar__links2"/>
-
             </h:form>
-        </ui:define>
-    </ui:composition>
-
+        </center>
+        <h:form>
+            <center>
+            <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" class="boton1" ></h:commandButton>
+            </center>
+            <br></br><br></br>
+         </h:form>
+        
+        
+    </h:body>
 </html>

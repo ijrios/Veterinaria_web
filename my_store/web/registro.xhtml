@@ -6,12 +6,14 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Registro</title>
-         <link href="resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
-         <link rel="stylesheet" type="text/css" href="login2/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+ <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="logincss/images/icons/favicon.ico"/>
+        <link href="resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="logincss/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="login2/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"/>
-        <link rel="stylesheet" type="text/css" href="login2/css/util.css"/>
-	<link rel="stylesheet" type="text/css" href="login2/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="logincss/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"/>
+        <link rel="stylesheet" type="text/css" href="logincss/css/util.css"/>
+	<link rel="stylesheet" type="text/css" href="logincss/css/main.css"/>
 <!--===============================================================================================-->
          <h:outputStylesheet name="css/jsfcrud.css"/>
          <script src="js/functions.js" type="text/javascript"></script>
@@ -19,7 +21,6 @@
     <h:body>
          <nav class ="navbar">
             <ul class="navbar__menu">
-                <br />
                 <br /><center><h1 class ="title">IOT STORE</h1></center>
                 <center><li class="navbar__links">
                         <h:link class="navbar__links" value="Inicio "/>
@@ -40,21 +41,21 @@
             <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uid}" for="uid" />
                     <br />
-                    <h:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  label="Id de usuario">
+                    <p:inputText id="uid" value="#{usersController.selected.uid}" title="#{bundle.CreateUsersTitle_uid}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uid}"  label="Id de usuario">
                         <f:validator validatorId="validarInt"></f:validator>
-                    </h:inputText>
+                    </p:inputText>
                     <br />
                     <h:outputLabel value="#{bundle.CreateUsersLabel_uname}" for="uname" />
                     <br />
-                    <h:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
+                    <p:inputText id="uname" value="#{usersController.selected.uname}" title="#{bundle.CreateUsersTitle_uname}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_uname}"/>
                     <br />
                     <h:outputLabel value="#{bundle.CreateUsersLabel_password}" for="password" />
                     <br />
-                    <h:inputSecret id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" 
+                    <p:password id="password" value="#{usersController.selected.password}" title="#{bundle.CreateUsersTitle_password}" required="true" requiredMessage="#{bundle.CreateUsersRequiredMessage_password}" 
                                    validatorMessage="La contraseña requiere  6 a 20 caracteres con al menos un dígito, una letra mayúscula, una letra minúscula y un símbolo especial (@#$%)" label="Contraseña 2">
                         <f:validateRegex pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"  >
                         </f:validateRegex>
-                    </h:inputSecret>
+                    </p:password>
                     
                 </h:panelGrid>
                   </center>

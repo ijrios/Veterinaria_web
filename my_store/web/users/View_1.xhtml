@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title>Editar tipo ID</title>
+        <title>Usuarios</title>
         <link rel="stylesheet" type="text/css" href="logincss/css/util.css"/>
 	<link rel="stylesheet" type="text/css" href="logincss/css/main.css"/>
         <link href="../resources/style/iotcss.css" rel="stylesheet" type="text/css"/>
@@ -17,7 +17,8 @@
     <h:body>
          <nav class ="navbar">
             <ul class="navbar__menu">
-                <br /><center><h1 class ="title">IOT STORE</h1></center>
+                <br></br>
+                <center><h1 class ="title" >IOT STORE</h1></center>
                 <center><li class="navbar__links">
                         <h:link outcome="/index.xhtml" class="navbar__links" value="Inicio "/>
                         <h:link outcome="/clientes/List_1.xhtml" class="navbar__links" value="Clientes "/>
@@ -27,33 +28,34 @@
                     </li></center>
             </ul>
         </nav>
-        
         <br></br><br></br>
-        
-        
-         <h:form>
-             <p:tooltip/>
-             <center>
-             <h2><h:outputText value="#{bundle.EditTiposIdTitle}" class ="title2"></h:outputText></h2>
-             <br></br>
-             <div id="cuadro">
+        <center>
+          <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <div id ="cuadro">
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="#{bundle.EditTiposIdLabel_tipoId}" for="tipoId" />
-                    <h:inputText id="tipoId" value="#{tiposIdController.selected.tipoId}" title="#{bundle.EditTiposIdTitle_tipoId}" required="true" requiredMessage="#{bundle.EditTiposIdRequiredMessage_tipoId}"/>
-                    <h:outputLabel value="#{bundle.EditTiposIdLabel_description}" for="description" />
-                    <h:inputText id="description" value="#{tiposIdController.selected.description}" title="#{bundle.EditTiposIdTitle_description}" required="true" requiredMessage="#{bundle.EditTiposIdRequiredMessage_description}"/>
+                    <h:outputText value="#{bundle.ViewUsersLabel_uid} "/>
+                    <h:outputText value="#{usersController.selected.uid}" title="#{bundle.ViewUsersTitle_uid} "/>
+                    <h:outputText value="#{bundle.ViewUsersLabel_uname}"/>
+                    <h:outputText value="#{usersController.selected.uname}" title="#{bundle.ViewUsersTitle_uname} "/>
+                    <h:outputText value="#{bundle.ViewUsersLabel_password}"/>
+                    <h:outputText value="#{usersController.selected.password}" title="#{bundle.ViewUsersTitle_password} "/>
                 </h:panelGrid>
-                </div>
-                <h:commandLink action="#{tiposIdController.update}" value="#{bundle.EditTiposIdSaveLink}" class="navbar__links2"/>
+                     </div>
                 <br />
-                <h:link outcome="View_1" value="#{bundle.EditTiposIdViewLink}" class="navbar__links2"/>
+                <h:commandLink action="#{usersController.destroyAndView}" value="#{bundle.ViewUsersDestroyLink}" class="navbar__links2"/>
                 <br />
-                <h:commandLink action="#{tiposIdController.prepareList}" value="#{bundle.EditTiposIdShowAllLink}" immediate="true" class="navbar__links2"/>
+                <h:link outcome="Edit_1" value="#{bundle.ViewUsersEditLink}" class="navbar__links2"/>
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditTiposIdIndexLink}" class="navbar__links2" />
-                </center>
+                <h:commandLink action="#{usersController.prepareCreate}" value="#{bundle.ViewUsersCreateLink}" class="navbar__links2"/>
+                <br />
+                <h:commandLink action="#{usersController.prepareList}" value="#{bundle.ViewUsersShowAllLink}" class="navbar__links2"/>
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewUsersIndexLink}" class="navbar__links2"/>
             </h:form>
-        
+        </center>
         <h:form>
             <center>
             <br /><h:commandButton action="#{login.logout}" value="Cerrar Sesion" class="boton1" ></h:commandButton>
