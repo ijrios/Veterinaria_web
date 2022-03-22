@@ -40,17 +40,16 @@
                 <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProductosLabel_id}" for="id" />
                     <h:inputText id="id" value="#{productosController.selected.id}" title="#{bundle.CreateProductosTitle_id}" required="true" requiredMessage="#{bundle.CreateProductosRequiredMessage_id}" label="Id de producto">
-                        <f:validator validatorId="validarInt"></f:validator>
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProductosLabel_descripcion}" for="descripcion" />
                     <h:inputText id="descripcion" value="#{productosController.selected.descripcion}" title="#{bundle.CreateProductosTitle_descripcion}" />
                     <h:outputLabel value="#{bundle.CreateProductosLabel_costo}" for="costo" />
                     <h:inputText id="costo" value="#{productosController.selected.costo}" title="#{bundle.CreateProductosTitle_costo}" label="Costo" >
-                        <f:validator validatorId="validarInt"></f:validator>
+                       
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProductosLabel_precio}" for="precio" />
                     <h:inputText id="precio" value="#{productosController.selected.precio}" title="#{bundle.CreateProductosTitle_precio}" label="Precio">
-                        <f:validator validatorId="validarInt"></f:validator>
+                       
                     </h:inputText>
                 </h:panelGrid>
                 </div>

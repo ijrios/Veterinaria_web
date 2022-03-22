@@ -40,7 +40,7 @@
                <h:panelGrid columns="2">
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_id}" for="id" />
                     <h:inputText id="id" value="#{proveedoresController.selected.id}" title="#{bundle.CreateProveedoresTitle_id}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_id}" label="Id proveedoro">
-                        <f:validator validatorId="validarInt"></f:validator>
+                      
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_nombres}" for="nombres" />
                     <h:inputText id="nombres" value="#{proveedoresController.selected.nombres}" title="#{bundle.CreateProveedoresTitle_nombres}" />
@@ -54,7 +54,7 @@
                     <h:inputText id="direccion" value="#{proveedoresController.selected.direccion}" title="#{bundle.CreateProveedoresTitle_direccion}" />
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_telefono}" for="telefono" />
                     <h:inputText id="telefono" value="#{proveedoresController.selected.telefono}" title="#{bundle.CreateProveedoresTitle_telefono}" label="Teléfono">
-                        <f:validator validatorId="validarInt"></f:validator>
+          
                     </h:inputText>
                     <h:outputLabel value="#{bundle.CreateProveedoresLabel_tipoId}" for="tipoId" />
                     <h:selectOneMenu id="tipoId" value="#{proveedoresController.selected.tipoId}" title="#{bundle.CreateProveedoresTitle_tipoId}" required="true" requiredMessage="#{bundle.CreateProveedoresRequiredMessage_tipoId}">
